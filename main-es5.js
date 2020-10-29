@@ -1276,7 +1276,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "img", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 10);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "img", 11);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1286,9 +1290,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 2) {
         var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", "https://serene-hollows-11661.herokuapp.com/uploads/" + ctx_r2.fileToUpload.name, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", "https://serene-hollows-11661.herokuapp.com/" + ctx_r2.filePath, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
       }
     }
 
@@ -1300,7 +1304,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.dashboardService = dashboardService;
         this.fileUploaded = false;
-        this.fileToUpload = null;
       }
 
       _createClass(DashboardComponent, [{
@@ -1320,6 +1323,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             // upload success
             console.log(result);
             _this3.fileUploaded = true;
+            _this3.filePath = result['path'];
           }, function (error) {
             console.log(error);
           });
@@ -1338,7 +1342,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["app-dashboard"]],
       decls: 18,
       vars: 1,
-      consts: [[1, "dashboard"], [1, "container"], [1, "row"], [1, "col"], [1, "col-sm-6"], [1, "form-group"], ["for", "file"], ["type", "file", "id", "file", 1, "form-control", 3, "change"], ["type", "button", 1, "form-control", "btn", "btn-secondary", 3, "click"], ["class", "row", 4, "ngIf"], [3, "src"]],
+      consts: [[1, "dashboard"], [1, "container"], [1, "row"], [1, "col"], [1, "col-sm-6"], [1, "form-group"], ["for", "file"], ["type", "file", "id", "file", 1, "form-control", 3, "change"], ["type", "button", 1, "form-control", "btn", "btn-secondary", 3, "click"], ["class", "row", 4, "ngIf"], [1, "img-file", "mt-3"], [3, "src"]],
       template: function DashboardComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -1405,7 +1409,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, DashboardComponent_div_17_Template, 5, 1, "div", 9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, DashboardComponent_div_17_Template, 6, 1, "div", 9);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1419,7 +1423,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       },
       directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"]],
-      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5zY3NzIn0= */"]
+      styles: [".img-file[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 600px;\n  overflow: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC9EOlxcTGVhcm5pbmdcXEFuZ3VsYXJcXGFuZ3VsYXItYXBwL3NyY1xcYXBwXFxkYXNoYm9hcmRcXGRhc2hib2FyZFxcZGFzaGJvYXJkLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9kYXNoYm9hcmQvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFdBQUE7RUFDQSxhQUFBO0VBQ0EsY0FBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvZGFzaGJvYXJkL2Rhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1nLWZpbGUge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDYwMHB4O1xyXG4gICAgb3ZlcmZsb3c6IGF1dG87XHJcbn0iLCIuaW1nLWZpbGUge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiA2MDBweDtcbiAgb3ZlcmZsb3c6IGF1dG87XG59Il19 */"]
     });
     /*@__PURE__*/
 
@@ -1685,7 +1689,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function uploadImage(fileToUpload) {
           var endpoint = 'https://serene-hollows-11661.herokuapp.com/api/v1/upload';
           var formData = new FormData();
-          formData.append('fileKey', fileToUpload, fileToUpload.name);
+          formData.append('image', fileToUpload);
           return this.http.post(endpoint, formData);
         }
       }]);
